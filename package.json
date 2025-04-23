@@ -4,9 +4,10 @@
   "description": "validate date ",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+     "start": "node index.js"
   },
-  "author": "",
+  "author": "Priyanka",
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0"
