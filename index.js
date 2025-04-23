@@ -5,7 +5,8 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 function isValidDate(dateString) {
-  const regex = /^\d{4}-\d{2}-\d{2}$/;
+  // Check format: DD/MM/YYYY
+  const regex = /^\d{2}\/\d{2}\/\d{4}$/;
   if (!regex.test(dateString)) return false;
 
   const date = new Date(dateString);
