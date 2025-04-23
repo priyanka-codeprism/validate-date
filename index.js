@@ -8,12 +8,15 @@ function isValidDate(dateString) {
   // Check format: DD/MM/YYYY
   const regex = /^\d{2}\/\d{2}\/\d{4}$/;
   if (!regex.test(dateString)) return false;
+  const [day, month, year] = dateString.split('/').map(Number);
 
-  const date = new Date(dateString);
+  const date = new Date(`${year}-${month}-${day}`);
   return (
     date instanceof Date &&
     !isNaN(date) &&
-    date.toISOString().slice(0, 10) === dateString
+    date.getDate() === day &&
+    date.getMonth() + 1 === month &&
+    date.getFullYear() === year
   );
 }
 
