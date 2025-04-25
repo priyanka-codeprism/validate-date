@@ -63,6 +63,10 @@ app.get('/last-two-days', (req, res) => {
 app.get('/last-three-days', (req, res) => {
   res.json({ date: getSpecificPastDate(3) });
 });
+// Get 4 days ago date
+app.get('/last-four-days', (req, res) => {
+  res.json({ date: getSpecificPastDate(4) });
+});
 
 // Get 5 days ago date
 app.get('/last-five-days', (req, res) => {
