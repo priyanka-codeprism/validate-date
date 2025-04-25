@@ -46,37 +46,37 @@ app.post('/validate-date', (req, res) => {
 
 // Get today's date
 app.get('/today', (req, res) => {
-  res.json({ today: getSpecificPastDate(0) });
+  res.json({ date: getSpecificPastDate(0) });
 });
 
 // Get yesterday's date
 app.get('/yesterday', (req, res) => {
-  res.json({ yesterday: getSpecificPastDate(1) });
+  res.json({ date: getSpecificPastDate(1) });
 });
 
 // Get 2 days ago date
 app.get('/last-two-days', (req, res) => {
-  res.json({ two_days_ago: getSpecificPastDate(2) });
+  res.json({ date: getSpecificPastDate(2) });
 });
 
 // Get 3 days ago date
 app.get('/last-three-days', (req, res) => {
-  res.json({ three_days_ago: getSpecificPastDate(3) });
+  res.json({ date: getSpecificPastDate(3) });
 });
 
 // Get 5 days ago date
 app.get('/last-five-days', (req, res) => {
-  res.json({ five_days_ago: getSpecificPastDate(5) });
+  res.json({ date: getSpecificPastDate(5) });
 });
 
 // Get 6 days ago date
 app.get('/last-six-days', (req, res) => {
-  res.json({ six_days_ago: getSpecificPastDate(6) });
+  res.json({ date: getSpecificPastDate(6) });
 });
 
 // Get 7 days ago date
 app.get('/last-seven-days', (req, res) => {
-  res.json({ seven_days_ago: getSpecificPastDate(7) });
+  res.json({ date: getSpecificPastDate(7) });
 });
 
 app.listen(PORT, () => {
