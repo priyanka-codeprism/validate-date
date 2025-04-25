@@ -78,10 +78,26 @@ app.get('/last-six-days', (req, res) => {
   res.json({ date: getSpecificPastDate(6) });
 });
 
-// Get 7 days ago date
+// // Get 7 days ago date
+// app.get('/last-seven-days', (req, res) => {
+//   res.json({ date: getSpecificPastDate(7) });
+// });
+
+// get all last 7days with today and yesterday
 app.get('/last-seven-days', (req, res) => {
-  res.json({ date: getSpecificPastDate(7) });
+  const dates = [
+    getSpecificPastDate(0),
+    getSpecificPastDate(1),
+    getSpecificPastDate(2),
+    getSpecificPastDate(3),
+    getSpecificPastDate(4),
+    getSpecificPastDate(5),
+    getSpecificPastDate(6),
+    getSpecificPastDate(7),
+  ];
+  res.json({ dates });
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
